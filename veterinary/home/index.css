@@ -133,4 +133,12 @@ form button {
 footer {
     background-color: black;
     color: #6bbc62;
+    padding: 2rem;
 }
+
+footer p {
+    display: inline-block;
+    margin-left: 2rem;
+}
+
+@media screen {}
