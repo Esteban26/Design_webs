@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Roboto&display=swap');
 :root{
     --brown:#E45826;
+    --ligth-brown: #F7C2B0;
     --black: #1B1A17;
     --background-black: #282722;
     --gray: #4E4E4E;
@@ -12,10 +13,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    
 }
 
-body{
-    height: 100vh;
+html{
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(3,1fr);
@@ -30,22 +32,42 @@ body{
 h1{
     display: inline-block;
     margin-right: 1rem;
+    color: var(--brown);
+    font-size: 3rem;
 }
 
 h2{
     font-weight: bold;
+    font-size: 2rem;
+
+}
+
+h3{
+    font-size: 1.5rem;
 }
 
 p{
     font-family: 'Roboto', sans-serif;
 }
 
-.header{
+header{
     grid-column: 1/4;
     grid-row: 1/2;
     grid-area: header;
     justify-self: center;
     align-self: center;
+    justify-items: center;
+}
+
+body{
+    /* height: 100vh; */
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    grid-column: 1/4;
+    grid-row: 2/4;
+    grid-area: main;
 }
 
 .title{
@@ -68,12 +90,6 @@ ion-icon{
     box-shadow:  5px 5px 14px #a1a1a1, -5px -5px 14px #ffffff;
 }
 
-main{
-    display: flex;
-    grid-column: 1/4;
-    grid-row: 2/5;
-    grid-area: main;
-}
 
 img{
     width: 100%;
@@ -91,4 +107,30 @@ img{
     padding: 20px;
     border-radius: 10px;
     box-shadow:  0px 5px 8px rgba(0, 0, 0, 0.25);
+}
+
+button{
+    width: 100%;
+    height: 2rem;
+    border: 2px solid var(--brown);
+    background-color: var(--brown);
+    border-radius: 4px;
+    font-weight: bold;
+    color:white;
+}
+
+footer{
+    grid-area: ;
+}
+
+@media screen and (max-width: 1024px){
+    main{
+        grid-template-columns: repeat(2,auto);
+    }
+}
+
+@media screen and (max-width: 700px){
+    main{
+        grid-template-columns: repeat(1,auto);
+    }
 }
