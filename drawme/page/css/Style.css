@@ -10,6 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 header{
@@ -23,6 +24,19 @@ header{
 
 h1{
     margin-top: 120px;
+}
+
+h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+
+}
+
+h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    margin-bottom: 20px;
 }
 
 .header__img{
@@ -52,6 +66,95 @@ h1{
     margin-top: 100px;
 }
 
-.main__proyect--img img{
-    width: 100px;
+main{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.main__text{
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 40px 0;
+    width:fit-content;
+    align-self: center;
+}
+
+.main__body{
+    align-self: center;
+    width: 80%;
+    margin-top: 50px;
+}
+
+.main__body__proyect{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: 
+        'img text'
+        'img text'
+        'img link';
+    gap: 40px;
+    height: 300px;
+    width: 100%;
+    background-color: var(--gray);
+    border-radius: 10px;
+    margin-top: 30px;
+    justify-items: end;
+
+}
+
+.main__body__proyect--img {
+    height: 100%;
+    width: 100%;
+    grid-area: img;
+}
+
+.main__body__proyect--img img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px 0 0 10px;
+}
+
+.main__body__proyect--text{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    grid-area: text;
+    padding-top: 45px;
+    padding-right: 35px;
+    justify-self: start;
+}
+
+.main__body__proyect a{
+    grid-area: link;
+    padding-right: 100px;
+    font-weight: bold;
+    color: var(--black);
+    height: fit-content;
+}
+
+footer{
+    height: 80px;
+    background-color: var(--dark);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__section{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+}
+
+.footer__section a{
+    margin-right: 15px;
+    color: var(--white);
+}
+
+.footer__section p i{
+    color: red;
 }
