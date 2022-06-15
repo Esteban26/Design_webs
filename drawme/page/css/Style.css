@@ -4,6 +4,8 @@
     --black: #000000;
     --dark: #101010;
     --gray: #f5f5f5;
+    --buttom: #f1f1f1;
+    --green: #2EDD2A;
 }
 
 *{
@@ -30,6 +32,9 @@ h2{
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     font-size: 1.5rem;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    margin-left: 10%;
 
 }
 
@@ -37,6 +42,11 @@ h3{
     font-family: 'Roboto', sans-serif;
     font-weight: bolder;
     margin-bottom: 20px;
+}
+
+a{
+    color: var(--white);
+    font-weight: bold;
 }
 
 .header__img{
@@ -83,7 +93,6 @@ main{
 .main__body{
     align-self: center;
     width: 80%;
-    margin-top: 50px;
 }
 
 .main__body__proyect{
@@ -99,7 +108,6 @@ main{
     width: 100%;
     background-color: var(--gray);
     border-radius: 10px;
-    margin-top: 30px;
     justify-items: end;
 
 }
@@ -157,4 +165,74 @@ footer{
 
 .footer__section p i{
     color: red;
+}
+/* -----------Drawings------------------------------ */
+
+ion-icon{
+    --ionicon-stroke-width: 3rem;
+    margin-left: 1rem;
+    font-size: 2rem;
+    margin-top: 56px;
+}
+
+
+
+.main__title{
+    display: flex;
+    flex-direction: row;
+}
+
+.main__drawing{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    background-color: var(--gray);
+    height: 500px;
+}
+
+.main__drawing--img{
+    height: 100%;
+    width: 100%;
+    grid-column: 1/span 1;
+    grid-row: 1/span 3;
+}
+
+.main__drawing--img img{
+    height:inherit;
+    width: 100%;
+}
+
+.main__drawing--text{
+    margin: 40px;
+    grid-column: 2/span 1;
+    grid-row: 1 /span 2;
+}
+
+button{
+    height: 50px;
+    width:100%;
+    border: none;
+    border-radius: 10px 10px 0 0 ;
+    background-color: var(--green);
+    font-weight: bold;
+    font-size: 1.1rem;
+    align-self: end;
+    grid-column: 2/span 1;
+    grid-row: 3 /span 1;
+    color: var(--white);
+}
+
+.main__drawing--img--reverse{
+    grid-column: 2/span 1;
+    grid-row: 1/span 3;
+}
+
+.main__drawing--text--reverse{
+    grid-column: 1/span 1;
+    grid-row: 1 /span 2;
+}
+
+.button--reverse{
+    grid-column: 1/span 1;
+    grid-row: 3 /span 1;
 }
