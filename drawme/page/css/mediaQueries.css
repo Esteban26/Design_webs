@@ -48,8 +48,7 @@
         padding: 50px 40px;
     }
     .header__bio--arrowDown i{
-        font-size: 50px;
-        margin-top: 50px;
+        display: none;
     }
     .main__body{
         width: 100%;
@@ -63,5 +62,19 @@
     .main__text{
         text-align: center;
     }
+    .footer__section{
+        flex-direction: column;
+    }
+    .footer__section--links{
+        margin-bottom: 15px;
+    }
 
+}
+
+@media (max-width:900px){
+    .main__drawing{
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+    }
 }

@@ -115,6 +115,7 @@ main{
     height: 100%;
     width: 100%;
     border-radius: 10px 0 0 10px;
+    object-fit: cover;
 }
 
 .main__body__proyect--text{
@@ -133,6 +134,10 @@ main{
     font-weight: bold;
     color: var(--black);
     height: fit-content;
+}
+
+.main__body__proyect a:hover{
+    color: #3c3c3c;
 }
 
 .main__text{
@@ -201,6 +206,7 @@ ion-icon{
 .main__drawing--img img{
     height:inherit;
     width: 100%;
+    object-fit: cover;
 }
 
 .main__drawing--text{
@@ -209,7 +215,7 @@ ion-icon{
     grid-row: 1 /span 2;
 }
 
-button{
+.button{
     height: 50px;
     width:100%;
     border: none;
@@ -221,7 +227,18 @@ button{
     grid-column: 2/span 1;
     grid-row: 3 /span 1;
     color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
+
+.button:hover{
+    background-color: #26d623;
+}
+
+
 
 .main__drawing--img--reverse{
     grid-column: 2/span 1;
